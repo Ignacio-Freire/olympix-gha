@@ -25,6 +25,8 @@ interface IGasZip {
 contract GasZipFacet is ILiFi, ReentrancyGuard, SwapperV2, Validatable {
     using SafeTransferLib for address;
 
+    private address immutable test;
+
     /// @dev GasZip-specific bridge data
     /// @param gasZipChainId The Gas.zip-specific chainId of the chain on which gas should be received on (https://dev.gas.zip/gas/chain-support/outbound)
     struct GasZipData {
